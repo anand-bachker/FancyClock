@@ -1,0 +1,87 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 40px;
+  background-color: #000000;
+}
+
+.centerbox, .clock {
+  height: 95vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: (0fr)[23];
+      grid-template-columns: repeat(23, 0fr);
+  -ms-grid-rows: (0fr)[12];
+      grid-template-rows: repeat(12, 0fr);
+  -webkit-transform: translate(0, -40px);
+          transform: translate(0, -40px);
+  grid-gap: 3px;
+  height: 330px;
+  width: 930px;
+  padding: 30px;
+  border: 2px solid white;
+}
+
+.clock {
+  height: 35.5px;
+  width: 35.5px;
+  border: 1px solid #503b3b;
+  border-radius: 50%;
+}
+
+.hourhandrotator {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+
+.hourhand {
+  background-color: white;
+  height: 1.5px;
+  width: 13px;
+  -webkit-transform: translate(6.5px, 0);
+          transform: translate(6.5px, 0);
+}
+
+.minhandrotator {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+
+.minhand {
+  background-color: white;
+  height: 1.5px;
+  width: 15px;
+  -webkit-transform: translate(7.5px, 0);
+          transform: translate(7.5px, 0);
+}
+/*# sourceMappingURL=main.css.map */

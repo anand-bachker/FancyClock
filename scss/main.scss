@@ -1,0 +1,63 @@
+$clockhandcolor: rgb(255, 255, 255);
+$clockhandheight: 1.5px;
+$clockhandhourwidth: 13px;
+$clockhandminwidth: 15px;
+$clockclolor: rgb(80, 59, 59);
+$clocksize: 35.5px;
+
+
+
+.centerbox {
+  height: 95vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-columns: repeat(23, 0fr);
+  grid-template-rows: repeat(12, 0fr);
+  transform: translate(0, -40px);
+  grid-gap: 3px;
+  height: 330px;
+  width: 930px;
+  padding: 30px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.clock {
+  @extend .centerbox;
+  height: $clocksize;
+  width: $clocksize;
+  border: 1px solid $clockclolor;
+  border-radius: 50%;
+}
+
+.hourhandrotator {
+  position: absolute;
+  transform: rotate(-90deg);
+  transition-property: transform;
+  transition-duration: 1.5s;
+}
+
+.hourhand {
+  background-color: $clockhandcolor;
+  height: $clockhandheight;
+  width: $clockhandhourwidth;
+  transform: translate($clockhandhourwidth/2, 0);
+}
+
+.minhandrotator {
+  position: absolute;
+  transform: rotate(-90deg);
+  transition-property: transform;
+  transition-duration: 1.5s;
+}
+
+.minhand {
+  background-color: $clockhandcolor;
+  height: $clockhandheight;
+  width: $clockhandminwidth;
+  transform: translate($clockhandminwidth/2, 0);
+}
